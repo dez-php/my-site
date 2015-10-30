@@ -1,0 +1,105 @@
+@defaultButtonColor: #6F50A5;
+@infoButtonColor: #289D9D;
+@successButtonColor: #349d2a;
+@grayButtonColor: #d8d8d8;
+@errorButtonColor: #9d304b;
+@darkButtonColor: #515151;
+
+form {
+  border: 1px solid rgb(208, 208, 208);
+  padding: 10px 20px;
+  background-color: rgba(226, 226, 226, 1);
+  label{
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+select {
+  background: #fff;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea{
+  outline: none;
+  padding: 10px 10px;
+  border-radius: 3px;
+  display: block;
+  border: 1px solid rgb(208, 208, 208);
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  min-height: 200px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+.button{
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid @defaultButtonColor * .8;
+  background-color: @defaultButtonColor;
+  padding: 10px 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  cursor: pointer;
+
+  &:hover{
+    border: 1px solid @defaultButtonColor * .6;
+    background-color: @defaultButtonColor * .8;
+  }
+
+  &.error {
+    border: 1px solid @errorButtonColor * .8;
+    background-color: @errorButtonColor;
+    &:hover{
+      border: 1px solid @errorButtonColor * .6;
+      background-color: @errorButtonColor * .8;
+    }
+  }
+
+  &.info {
+    border: 1px solid @infoButtonColor * .8;
+    background-color: @infoButtonColor;
+    &:hover{
+      border: 1px solid @infoButtonColor * .6;
+      background-color: @infoButtonColor * .8;
+    }
+  }
+
+  &.success {
+    border: 1px solid @successButtonColor * .8;
+    background-color: @successButtonColor;
+    &:hover{
+      border: 1px solid @successButtonColor * .6;
+      background-color: @successButtonColor * .8;
+    }
+  }
+
+  &.gray {
+    border: 1px solid @grayButtonColor * .8;
+    background-color: @grayButtonColor;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+    &:hover{
+      border: 1px solid @grayButtonColor * .8;
+      background-color: @grayButtonColor * .9;
+    }
+  }
+
+  &.dark {
+    border: 1px solid @darkButtonColor * .8;
+    background-color: @darkButtonColor;
+    &:hover{
+      border: 1px solid @darkButtonColor * .6;
+      background-color: @darkButtonColor * .8;
+    }
+  }
+
+}

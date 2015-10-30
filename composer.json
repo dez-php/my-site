@@ -1,0 +1,6 @@
+{
+  "require" : {
+    "php": ">=5.5",
+    "dez-php/dez-mvc-app": ">=1"
+  }
+}

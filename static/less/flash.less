@@ -1,0 +1,46 @@
+@bgSuccessColor: #ABDACC;
+@bgInfoColor: #C9DEEF;
+@bgNoticeColor: #E2EFC9;
+
+@bgWarningColor: #EFDCC9;
+@bgErrorColor: #EFC9CC;
+
+.flash-message {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 0px #fff;
+  font-weight: bold;
+
+  &.flash-message-success {
+    border: 1px solid @bgSuccessColor * 0.9;
+    box-shadow: inset 1px 1px 0px @bgSuccessColor * 1.1;
+    background-color: @bgSuccessColor;
+  }
+
+  &.flash-message-info {
+    border: 1px solid @bgInfoColor * 0.9;
+    box-shadow: inset 1px 1px 0px @bgInfoColor * 1.1;
+    background-color: @bgInfoColor;
+  }
+
+  &.flash-message-notice {
+    border: 1px solid @bgNoticeColor * 0.9;
+    box-shadow: inset 1px 1px 0px @bgNoticeColor * 1.1;
+    background-color: @bgNoticeColor;
+  }
+
+  &.flash-message-warning {
+    border: 1px solid @bgWarningColor * 0.9;
+    box-shadow: inset 1px 1px 0px @bgWarningColor * 1.1;
+    background-color: @bgWarningColor;
+  }
+
+  &.flash-message-error {
+    border: 1px solid @bgErrorColor * 0.9;
+    box-shadow: inset 1px 1px 0px @bgErrorColor * 1.1;
+    background-color: @bgErrorColor;
+  }
+
+}
