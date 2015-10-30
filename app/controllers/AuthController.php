@@ -12,7 +12,11 @@
         {
 
             if( $this->request->isPost() ) {
-                $this->auth->authenticate( $this->request->getPost( 'email' ), $this->request->getPost( 'password' ) );
+                try {
+                    $this->auth->authenticate( $this->request->getPost( 'email' ), $this->request->getPost( 'password' ) );
+                } catch ( \Exception $e ) {
+                    $this->flash->error( $e->getMessage() );
+                }
                 $this->response->redirect( $this->url->path( '' ) );
             }
 
